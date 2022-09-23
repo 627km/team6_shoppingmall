@@ -24,9 +24,4 @@ class InsertCust {
 		}
 		System.out.println("INSERT OK");
 	}
-
 }
-
-
-
-

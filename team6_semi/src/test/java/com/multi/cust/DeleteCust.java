@@ -22,9 +22,4 @@ class DeleteCust {
 		}
 		System.out.println("DELETE OK");
 	}
-
 }
-
-
-
-
