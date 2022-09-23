@@ -28,5 +28,4 @@ public class CustDTO {
 	private String birth;
 	
 	private String tier_tier;
-	
 }
