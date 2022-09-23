@@ -30,6 +30,6 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 			INNER JOIN purchase p  ON p.orderid=od.orderid
 			INNER JOIN item2 i ON i.itemid=od.itemid
 			INNER JOIN cust cu ON cu.custid=p.custid
-			WHERE cu.cust_id = #{cust_id}
+			WHERE cu.custid = #{custid}
 	</select>
 </mapper>
