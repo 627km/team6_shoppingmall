@@ -18,7 +18,7 @@ class GetAllOrder_Detail {
 	void contextLoads() {
 		List<Order_DetailDTO> list = null;
 		try {
-			list = service.detailall(101);
+			list = service.detailall(123);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
