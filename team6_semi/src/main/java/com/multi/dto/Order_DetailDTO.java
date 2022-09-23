@@ -23,6 +23,6 @@ public class Order_DetailDTO {
 	String color;
 	String size;
 	
-	String  cust_name;
+	String cust_name;
 	String item_name;
 }
