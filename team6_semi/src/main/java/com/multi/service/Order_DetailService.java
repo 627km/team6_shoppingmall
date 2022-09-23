@@ -40,12 +40,12 @@ public class Order_DetailService implements MyService<Integer,Order_DetailDTO> {
 
 	@Override
 	public List<Order_DetailDTO> get() throws Exception {
-		return null;
+		return mapper.selectAll();
 	}
 
-	public List<Order_DetailDTO> detailall(Integer cust_id) throws Exception {
+	public List<Order_DetailDTO> viewOrder_Detail(Integer orderid) throws Exception {
 		
-		return mapper.detailall(cust_id);
+		return mapper.ViewOrder_Detail(orderid);
 	}
 
 }

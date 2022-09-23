@@ -8,9 +8,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.multi.dto.Order_DetailDTO;
 import com.multi.service.Order_DetailService;
-
 @SpringBootTest
 class GetAllOrder_Detail {
+
 	@Autowired
 	Order_DetailService service;
 	
@@ -18,13 +18,15 @@ class GetAllOrder_Detail {
 	void contextLoads() {
 		List<Order_DetailDTO> list = null;
 		try {
-			list = service.detailall(123);
+			list = service.get();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		for(Order_DetailDTO c:list) {
-			System.out.println(c);
+			System.out.println(c); 
 		}
+		
 	}
 }
