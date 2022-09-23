@@ -1,26 +1,32 @@
-package com.multi.orderdetail;
+package com.multi.delivery;
+
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.Order_DetailDTO;
-import com.multi.service.Order_DetailService;
-
-
+import com.multi.dto.DeliveryDTO;
+import com.multi.service.DeliveryService;
 
 @SpringBootTest
-public class UpdateOrder_Detail {
+class GetAllDelivery {
 	@Autowired
-	Order_DetailService service;
+	DeliveryService service;
+	
 	@Test
 	void contextLoads() {
-		Order_DetailDTO od = new Order_DetailDTO(101,11,1003,7,20000,"검정","M",null,null);
+		List<DeliveryDTO> list=null;
 		try {
-			service.modify(od);
+			list = service.get();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		for(DeliveryDTO i:list) {
+			System.out.println(i);
+		}
+		
 	}
 }

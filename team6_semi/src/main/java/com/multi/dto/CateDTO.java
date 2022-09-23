@@ -1,7 +1,5 @@
 package com.multi.dto;
 
-
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,20 +8,12 @@ import lombok.ToString;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 @Getter
+@Setter
 @ToString
-public class Order_DetailDTO {
+public class CateDTO {
+	private int cateid;
+	private String name;
+	private int topid;
 
-	int detailid;
-	int orderid;
-	int itemid;
-	int cnt;
-	int price;
-	String color;
-	String size;
-	
-	
-	String cust_name;
-	String item_name;
 }

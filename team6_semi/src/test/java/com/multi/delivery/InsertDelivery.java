@@ -1,23 +1,22 @@
-package com.multi.orderdetail;
+package com.multi.delivery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.Order_DetailDTO;
-import com.multi.service.Order_DetailService;
-
-
+import com.multi.dto.DeliveryDTO;
+import com.multi.service.DeliveryService;
 
 @SpringBootTest
-public class UpdateOrder_Detail {
+class InsertDelivery {
 	@Autowired
-	Order_DetailService service;
+	DeliveryService service;
+	
 	@Test
 	void contextLoads() {
-		Order_DetailDTO od = new Order_DetailDTO(101,11,1003,7,20000,"검정","M",null,null);
+		DeliveryDTO delivery=new DeliveryDTO(0, 12, "배송 준비");
 		try {
-			service.modify(od);
+			service.register(delivery);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

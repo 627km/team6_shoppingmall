@@ -1,26 +1,28 @@
-package com.multi.orderdetail;
-
+package com.multi.product_option;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.Order_DetailDTO;
-import com.multi.service.Order_DetailService;
-
-
+import com.multi.dto.Product_OptionDTO;
+import com.multi.service.Product_OptionService;
 
 @SpringBootTest
-public class UpdateOrder_Detail {
+	class GetProduct_Option {
+	
 	@Autowired
-	Order_DetailService service;
+	Product_OptionService service;
+	
 	@Test
 	void contextLoads() {
-		Order_DetailDTO od = new Order_DetailDTO(101,11,1003,7,20000,"검정","M",null,null);
+		Product_OptionDTO option = null;
 		try {
-			service.modify(od);
+			option = service.get(1000);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.println(option);
+		
 	}
+
 }
