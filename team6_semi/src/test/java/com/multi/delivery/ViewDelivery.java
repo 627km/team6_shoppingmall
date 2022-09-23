@@ -1,4 +1,4 @@
-package com.multi.purchase;
+package com.multi.delivery;
 
 import java.util.List;
 
@@ -6,23 +6,27 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.PurchaseDTO;
-import com.multi.service.PurchaseService;
+import com.multi.dto.DeliveryDTO;
+import com.multi.service.DeliveryService;
 
 @SpringBootTest
-class GetPurchase {
+class ViewDelivery {
 	@Autowired
-	PurchaseService service;
+	DeliveryService service;
 	
 	@Test
 	void contextLoads() {
-
-		PurchaseDTO purcase=null;
+		List<DeliveryDTO> list=null;
 		try {
-			purcase=service.get(null);
+			list = service.viewDelivery(13);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		for(DeliveryDTO i:list) {
+			System.out.println(i);
+		}
+		
 	}
 }
