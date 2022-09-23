@@ -15,7 +15,7 @@ class DeleteCust {
 	@Test
 	void contextLoads() {
 		try {
-			service.remove(103);
+			service.remove(109);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
