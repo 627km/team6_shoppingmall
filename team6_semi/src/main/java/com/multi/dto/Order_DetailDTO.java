@@ -22,4 +22,7 @@ public class Order_DetailDTO {
 	int price;
 	String color;
 	String size;
+	
+	String cust_name;
+	String item_name;
 }

@@ -14,7 +14,7 @@ class InsertOrder_Detail {
 	@Test
 	void contextLoads() {
 		try {
-			service.register(new Order_DetailDTO(200,12,1000,2,45000,"검정","XL"));
+			service.register(new Order_DetailDTO(200,12,1000,2,45000,"검정","XL",null,null));
 			System.out.println("OK");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

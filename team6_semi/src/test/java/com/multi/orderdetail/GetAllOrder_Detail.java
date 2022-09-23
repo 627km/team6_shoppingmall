@@ -1,5 +1,7 @@
 package com.multi.orderdetail;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,20 +9,22 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.multi.dto.Order_DetailDTO;
 import com.multi.service.Order_DetailService;
 
-
-
 @SpringBootTest
-public class UpdateOrder_Detail {
+class GetAllOrder_Detail {
 	@Autowired
 	Order_DetailService service;
+	
 	@Test
 	void contextLoads() {
-		Order_DetailDTO od = new Order_DetailDTO(101,11,1003,7,20000,"검정","M",null,null);
+		List<Order_DetailDTO> list = null;
 		try {
-			service.modify(od);
+			list = service.detailall(101);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+		for(Order_DetailDTO c:list) {
+			System.out.println(c);
 		}
 	}
 }
