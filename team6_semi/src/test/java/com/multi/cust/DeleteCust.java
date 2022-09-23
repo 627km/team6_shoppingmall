@@ -1,21 +1,21 @@
-package com.multi.cart;
+package com.multi.cust;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.service.CartService;
+import com.multi.service.CustService;
 
 @SpringBootTest
 class DeleteCust {
 
 	@Autowired
-	CartService service;
+	CustService service;
 	
 	@Test
 	void contextLoads() {
 		try {
-			service.remove(103);
+			service.remove(126);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

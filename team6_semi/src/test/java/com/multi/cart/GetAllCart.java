@@ -19,7 +19,7 @@ class GetAllCart {
 	void contextLoads() {
 		List<CartDTO> list = null;
 		try {
-			list = service.get();
+			list = service.cartAll(125);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
