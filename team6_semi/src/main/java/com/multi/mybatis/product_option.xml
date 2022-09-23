@@ -27,9 +27,10 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 		DELETE FROM product_option WHERE optionid=#{optionid}
 	</delete> 
 	
-	<select id = "productall" resultType = "Product_OptionDTO">
+	<select id = "viewProduct" resultType = "Product_OptionDTO">
 	SELECT po.optionid, po.itemid, it.name AS item_name, po.color, po.size, po.stock FROM product_option po
-	INNER JOIN item2 it ON po.itemid = it.itemid;
+	INNER JOIN item2 it ON po.itemid = it.itemid
+	WHERE po.itemid=#{itemid}
  
    </select>
    
