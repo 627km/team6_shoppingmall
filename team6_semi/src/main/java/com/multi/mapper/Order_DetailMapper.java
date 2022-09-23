@@ -12,5 +12,6 @@ import com.multi.frame.MyMapper;
 @Repository
 @Mapper
 public interface Order_DetailMapper extends MyMapper<Integer,Order_DetailDTO> {
-	public List<Order_DetailDTO> detailall(Integer cust_id) throws Exception;
+	public List<Order_DetailDTO> ViewOrder_Detail(Integer orderid) throws Exception;
+	
 }

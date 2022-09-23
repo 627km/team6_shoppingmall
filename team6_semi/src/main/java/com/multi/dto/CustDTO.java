@@ -18,7 +18,6 @@ public class CustDTO {
 	private int tierid;
 	private String pwd;
 	private String name;
-	
 	private String gender;
 	private String addr;
 	private String phone;

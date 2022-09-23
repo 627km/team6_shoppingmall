@@ -40,8 +40,8 @@ public class CartService implements MyService<Integer, CartDTO>{
 		return null;
 	}
 	
-	public List<CartDTO> cartAll(int custid) throws Exception {
-		return mapper.cartAll(custid);
+	public List<CartDTO> viewCart(int custid) throws Exception {
+		return mapper.viewCart(custid);
 	}
 
 }

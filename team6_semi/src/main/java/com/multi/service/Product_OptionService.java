@@ -44,8 +44,8 @@ public class Product_OptionService implements MyService<Integer, Product_OptionD
 		return mapper.selectAll();
 	}
 	
-	public List<Product_OptionDTO> productall() throws Exception {
-		return mapper.productall();
+	public List<Product_OptionDTO> viewProduct(Integer itemid) throws Exception {
+		return mapper.viewProduct(itemid);
 	}
 	
 }
