@@ -43,4 +43,8 @@ public class Order_DetailService implements MyService<Integer,Order_DetailDTO> {
 		return null;
 	}
 
+	public List<Order_DetailDTO> detailall(Integer cust_id)throws Exception {
+		return mapper.detailall(cust_id);
+	}
+
 }

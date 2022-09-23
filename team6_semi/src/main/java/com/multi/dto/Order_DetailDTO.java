@@ -15,11 +15,15 @@ import lombok.ToString;
 @ToString
 public class Order_DetailDTO {
 
-	int detailid;
-	int orderid;
-	int itemid;
-	int cnt;
-	int price;
-	String color;
-	String size;
+	private int detailid;
+	private int orderid;
+	private int itemid;
+	private int cnt;
+	private int price;
+	private String color;
+	private String size;
+	
+	private String custname;
+	private String itemname;
+	
 }
