@@ -1,5 +1,7 @@
 package com.multi.cart;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -8,21 +10,25 @@ import com.multi.dto.CartDTO;
 import com.multi.service.CartService;
 
 @SpringBootTest
-class UpdateCart {
+class ViewCart {
 
 	@Autowired
 	CartService service;
 	
 	@Test
 	void contextLoads() {
-		CartDTO cart = new CartDTO(109, 125, 1003, 1, null, "윤진호", "청바지", 58000, 58000);
+		List<CartDTO> list = null;
 		try {
-			service.modify(cart);
+			list = service.viewCart(125);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("UPDATE OK");
+		
+		for(CartDTO c:list) {
+			System.out.println(c);
+		}
+		
 	}
 
 }

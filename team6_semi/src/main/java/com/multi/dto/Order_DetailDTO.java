@@ -24,6 +24,6 @@ public class Order_DetailDTO {
 	String size;
 	
 	
-	String cust_name;
-	String item_name;
+	String custname;
+	String itemname;
 }
