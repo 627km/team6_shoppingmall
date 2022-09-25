@@ -14,7 +14,11 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 		AND po.color = od.color
 	</select>
 	
-	<select id="selectall" resultType="LikedDTO">
+	<select id="viewItem2All" resultType="Item2DTO">
+	SELECT i.itemid, i.cateid, cat.name AS cate_name, i.name, i.price, po.color AS po_color, po.size AS po_size, po.stock AS po_stock FROM item2 i
+	INNER JOIN cate cat ON i.cateid = cat.cateid
+	INNER JOIN seller s ON i.sellerid = s.sellerid
+	INNER JOIN product_option po ON i.itemid = po.itemid
 	</select>
 
  	<insert id="insert" parameterType="Item2DTO">
@@ -26,7 +30,7 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 	</update> 
 	
 	<delete id="delete" parameterType="Integer">
-		DELETE FROM liked WHERE likedid=#{likedid}
+		DELETE FROM item2 WHERE itemid = #{itemid}
 	</delete>
 	
 	<select id="item2all" parameterType="Integer" resultType="Item2DTO">
