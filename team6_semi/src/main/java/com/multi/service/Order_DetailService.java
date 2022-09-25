@@ -44,7 +44,6 @@ public class Order_DetailService implements MyService<Integer,Order_DetailDTO> {
 	}
 
 	public List<Order_DetailDTO> viewOrder_Detail(Integer orderid) throws Exception {
-		
 		return mapper.ViewOrder_Detail(orderid);
 	}
 
