@@ -1,35 +1,32 @@
-package com.multi.item2;
+package com.multi.purchase;
+
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.Item2DTO;
-import com.multi.service.Item2Service;
-
+import com.multi.dto.PurchaseDTO;
+import com.multi.service.PurchaseService;
 
 @SpringBootTest
-	class GetAllItem2 {
-	
+class ViewPurchase {
 	@Autowired
-	Item2Service service;
+	PurchaseService service;
 	
 	@Test
 	void contextLoads() {
-		
-		List<Item2DTO> list = null;
-		
+		List<PurchaseDTO> list=null;
 		try {
-			list = service.item2all(1000);
+			list = service.viewPurchase(125);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		for(Item2DTO i:list) {
+		for(PurchaseDTO i:list) {
 			System.out.println(i);
 		}
+		
 	}
-
 }

@@ -1,5 +1,7 @@
 package com.multi.purchase;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,10 +16,11 @@ class GetPurchase {
 	
 	@Test
 	void contextLoads() {
-		PurchaseDTO purcase=null;
+
+		PurchaseDTO purchase=null;
 		try {
-			purcase=service.get(10);
-			System.out.println(purcase);
+			purchase=service.get(10);
+			System.out.println(purchase);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

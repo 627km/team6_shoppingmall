@@ -1,4 +1,5 @@
 package com.multi.liked;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,21 +10,26 @@ import com.multi.service.LikedService;
 
 
 @SpringBootTest
-class GetLiked {
-
+	class ViewLikedItemid {
+	
 	@Autowired
 	LikedService service;
 	
 	@Test
 	void contextLoads() {
-		LikedDTO like = null;
+		
+		List<LikedDTO> list = null;
+		
 		try {
-			like = service.get(100);
+			list = service.viewLikedItemid(1000);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(like);
+		
+		for(LikedDTO l:list) {
+			System.out.println(l);
+		}
 	}
 
 }

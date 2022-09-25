@@ -1,4 +1,5 @@
 package com.multi.liked;
+
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -8,9 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.multi.dto.LikedDTO;
 import com.multi.service.LikedService;
 
-
 @SpringBootTest
-	class GetAllLiked {
+class GetAllLiked {
 	
 	@Autowired
 	LikedService service;
@@ -19,9 +19,8 @@ import com.multi.service.LikedService;
 	void contextLoads() {
 		
 		List<LikedDTO> list = null;
-		
 		try {
-			list = service.likedall(123);
+			list = service.get();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -30,6 +29,7 @@ import com.multi.service.LikedService;
 		for(LikedDTO l:list) {
 			System.out.println(l);
 		}
+		
 	}
 
 }
