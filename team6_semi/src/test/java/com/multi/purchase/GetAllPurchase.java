@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.DeliveryDTO;
 import com.multi.dto.PurchaseDTO;
 import com.multi.service.PurchaseService;
 
@@ -19,7 +18,7 @@ class GetAllPurchase {
 	void contextLoads() {
 		List<PurchaseDTO> list=null;
 		try {
-			list = service.purchaseall("100");
+			list = service.get();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

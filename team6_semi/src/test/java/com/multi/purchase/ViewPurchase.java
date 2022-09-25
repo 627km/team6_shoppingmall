@@ -10,20 +10,23 @@ import com.multi.dto.PurchaseDTO;
 import com.multi.service.PurchaseService;
 
 @SpringBootTest
-class GetPurchase {
+class ViewPurchase {
 	@Autowired
 	PurchaseService service;
 	
 	@Test
 	void contextLoads() {
-
-		PurchaseDTO purchase=null;
+		List<PurchaseDTO> list=null;
 		try {
-			purchase=service.get(10);
-			System.out.println(purchase);
+			list = service.viewPurchase(125);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		for(PurchaseDTO i:list) {
+			System.out.println(i);
+		}
+		
 	}
 }
