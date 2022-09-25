@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.multi.service.CartService;
 
 @SpringBootTest
-class DeleteCust {
+class DeleteCart {
 
 	@Autowired
 	CartService service;

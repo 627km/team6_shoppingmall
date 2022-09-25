@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 <mapper namespace="com.multi.mapper.CustMapper">
 	
 	<select id="select" parameterType="Integer" resultType="custDTO">
-		SELECT cu.custid, cu.name, ti.tier AS tier_tier, cu.gender, cu.addr, cu.phone, cu.email, cu.birth 
+		SELECT cu.custid, cu.tierid, cu.pwd, cu.name, cu.gender, cu.addr, cu.phone, cu.email, cu.rdate, cu.acc_amount, cu.birth, ti.tier AS tier_tier
 		FROM cust cu
 		INNER JOIN tier ti ON cu.tierid = ti.tierid
 		WHERE custid=#{custid}
@@ -13,9 +13,7 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 	
 	
 	<select id="selectAll" resultType="custDTO">
-		SELECT cu.custid, cu.name, ti.tier AS tier_tier, cu.gender, cu.addr, cu.phone, cu.email, cu.birth 
-		FROM cust cu
-		INNER JOIN tier ti ON cu.tierid = ti.tierid
+		SELECT * FROM cust
 	</select>
 	
 	 

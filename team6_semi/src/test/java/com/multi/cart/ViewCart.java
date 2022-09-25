@@ -10,7 +10,7 @@ import com.multi.dto.CartDTO;
 import com.multi.service.CartService;
 
 @SpringBootTest
-class GetAllCart {
+class ViewCart {
 
 	@Autowired
 	CartService service;
@@ -19,7 +19,7 @@ class GetAllCart {
 	void contextLoads() {
 		List<CartDTO> list = null;
 		try {
-			list = service.get();
+			list = service.viewCart(125);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
