@@ -17,9 +17,10 @@ class GetPurchase {
 	@Test
 	void contextLoads() {
 
-		PurchaseDTO purcase=null;
+		PurchaseDTO purchase=null;
 		try {
-			purcase=service.get(null);
+			purchase=service.get(10);
+			System.out.println(purchase);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
