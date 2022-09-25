@@ -18,9 +18,5 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 	</update>
 	<delete id="delete" parameterType="Integer">
 		DELETE FROM delivery WHERE delid=#{delid}
-	</delete>
-	<select id="viewDelivery" parameterType="Integer" resultType="DeliveryDTO">
-		SELECT * FROM delivery
-		WHERE orderid=#{orderid}
-	</select>		 
+	</delete>	 
 </mapper>

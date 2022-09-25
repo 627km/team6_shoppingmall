@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.multi.dto.DeliveryDTO;
-import com.multi.dto.PurchaseDTO;
 import com.multi.frame.MyService;
 import com.multi.mapper.DeliveryMapper;
 
@@ -39,9 +38,6 @@ public class DeliveryService implements MyService<Integer, DeliveryDTO>{
 	@Override
 	public List<DeliveryDTO> get() throws Exception {
 		return mapper.selectAll();
-	}
-	public List<DeliveryDTO> viewDelivery(Integer order_id) throws Exception {
-		return mapper.viewDelivery(order_id);
 	}
 	
 }

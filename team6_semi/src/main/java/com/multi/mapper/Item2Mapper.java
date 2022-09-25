@@ -12,6 +12,6 @@ import com.multi.frame.MyMapper;
 @Mapper
 public interface Item2Mapper extends MyMapper<Integer, Item2DTO>{
 
-	public List<Item2DTO> viewItem2All() throws Exception;
+	public List<Item2DTO> item2all(int itemid) throws Exception;
 	
 }

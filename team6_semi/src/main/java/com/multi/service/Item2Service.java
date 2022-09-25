@@ -37,7 +37,10 @@ public class Item2Service implements MyService<Integer, Item2DTO>{
 
 	@Override
 	public List<Item2DTO> get() throws Exception {
-		return mapper.viewItem2All();
+		return null;
 	}
 	
+	public List<Item2DTO> item2all(int itemid) throws Exception {
+		return mapper.item2all(itemid);
+	}
 }

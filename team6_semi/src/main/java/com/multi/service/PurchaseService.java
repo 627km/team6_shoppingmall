@@ -39,8 +39,8 @@ public class PurchaseService implements MyService<Integer, PurchaseDTO>{
 	public List<PurchaseDTO> get() throws Exception {
 		return mapper.selectAll();
 	}
-	public List<PurchaseDTO> viewPurchase(Integer cust_id) throws Exception {
-		return mapper.viewPurchase(cust_id);
+	public List<PurchaseDTO> purchaseall(String order_id) throws Exception {
+		return mapper.purchaseall(order_id);
 	}
 	
 }

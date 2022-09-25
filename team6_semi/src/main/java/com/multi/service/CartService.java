@@ -37,11 +37,11 @@ public class CartService implements MyService<Integer, CartDTO>{
 
 	@Override
 	public List<CartDTO> get() throws Exception {
-		return mapper.selectAll();
+		return null;
 	}
 	
-	public List<CartDTO> viewCart(int custid) throws Exception {
-		return mapper.viewCart(custid);
+	public List<CartDTO> cartAll(int custid) throws Exception {
+		return mapper.cartAll(custid);
 	}
 
 }

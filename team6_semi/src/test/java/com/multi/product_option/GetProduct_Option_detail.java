@@ -1,4 +1,4 @@
-package com.multi.item2;
+package com.multi.product_option;
 
 import java.util.List;
 
@@ -6,30 +6,29 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.Item2DTO;
-import com.multi.service.Item2Service;
+import com.multi.dto.Product_OptionDTO;
+import com.multi.service.Product_OptionService;
+
 
 @SpringBootTest
-class ViewItem2All {
+class GetProduct_Option_detail {
 	
 	@Autowired
-	Item2Service service;
-	
+	Product_OptionService service;
+
 	@Test
 	void contextLoads() {
-		
-		List<Item2DTO> list = null;
+		List<Product_OptionDTO> list = null;
 		try {
-			list = service.get();
+			list = service.productall();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		for(Item2DTO i:list) {
-			System.out.println(i);
+		for(Product_OptionDTO c:list) {
+			System.out.println(c);
 		}
-		
 	}
 
 }

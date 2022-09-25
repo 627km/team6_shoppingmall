@@ -1,32 +1,35 @@
-package com.multi.delivery;
-
+package com.multi.item2;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.DeliveryDTO;
-import com.multi.service.DeliveryService;
+import com.multi.dto.Item2DTO;
+import com.multi.service.Item2Service;
+
 
 @SpringBootTest
-class ViewDelivery {
+	class GetAllItem2 {
+	
 	@Autowired
-	DeliveryService service;
+	Item2Service service;
 	
 	@Test
 	void contextLoads() {
-		List<DeliveryDTO> list=null;
+		
+		List<Item2DTO> list = null;
+		
 		try {
-			list = service.viewDelivery(13);
+			list = service.item2all(1000);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		for(DeliveryDTO i:list) {
+		for(Item2DTO i:list) {
 			System.out.println(i);
 		}
-		
 	}
+
 }
