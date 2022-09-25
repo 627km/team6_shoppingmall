@@ -1,4 +1,5 @@
 package com.multi.item2;
+
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -8,9 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.multi.dto.Item2DTO;
 import com.multi.service.Item2Service;
 
-
 @SpringBootTest
-	class GetAllItem2 {
+class ViewItem2All {
 	
 	@Autowired
 	Item2Service service;
@@ -19,9 +19,8 @@ import com.multi.service.Item2Service;
 	void contextLoads() {
 		
 		List<Item2DTO> list = null;
-		
 		try {
-			list = service.item2all(1000);
+			list = service.get();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -30,6 +29,7 @@ import com.multi.service.Item2Service;
 		for(Item2DTO i:list) {
 			System.out.println(i);
 		}
+		
 	}
 
 }

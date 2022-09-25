@@ -37,11 +37,15 @@ public class LikedService implements MyService<Integer, LikedDTO>{
 
 	@Override
 	public List<LikedDTO> get() throws Exception {
-		return null;
+		return mapper.selectAll();
 	}
 	
-	public List<LikedDTO> likedall(int custid) throws Exception {
-		return mapper.likedall(custid);
+	public List<LikedDTO> viewLikedCustid(int custid) throws Exception {
+		return mapper.viewLikedCustid(custid);
+	}
+	
+	public List<LikedDTO> viewLikedItemid(int itemid) throws Exception {
+		return mapper.viewLikedItemid(itemid);
 	}
 	
 }
