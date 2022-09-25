@@ -12,6 +12,7 @@ import com.multi.frame.MyMapper;
 @Mapper
 public interface LikedMapper extends MyMapper<Integer, LikedDTO>{
 
-	public List<LikedDTO> likedall(int custid) throws Exception;
+	public List<LikedDTO> viewLikedCustid(int custid) throws Exception;
+	public List<LikedDTO> viewLikedItemid(int itemid) throws Exception;
 	
 }

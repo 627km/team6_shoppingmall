@@ -1,4 +1,4 @@
-package com.multi.liked;
+package com.multi.purchase;
 
 import java.util.List;
 
@@ -6,30 +6,28 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.LikedDTO;
-import com.multi.service.LikedService;
+import com.multi.dto.DeliveryDTO;
+import com.multi.dto.PurchaseDTO;
+import com.multi.service.PurchaseService;
 
 @SpringBootTest
-class GetAllLiked {
-	
+class ViewPurchase {
 	@Autowired
-	LikedService service;
+	PurchaseService service;
 	
 	@Test
 	void contextLoads() {
-		
-		List<LikedDTO> list = null;
+		List<PurchaseDTO> list=null;
 		try {
-			list = service.get();
+			list = service.viewPurchase(125);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		for(LikedDTO l:list) {
-			System.out.println(l);
+		for(PurchaseDTO i:list) {
+			System.out.println(i);
 		}
 		
 	}
-
 }

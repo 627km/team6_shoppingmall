@@ -1,4 +1,4 @@
-package com.multi.liked;
+package com.multi.item2;
 
 import java.util.List;
 
@@ -6,19 +6,19 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.LikedDTO;
-import com.multi.service.LikedService;
+import com.multi.dto.Item2DTO;
+import com.multi.service.Item2Service;
 
 @SpringBootTest
-class GetAllLiked {
+class ViewItem2All {
 	
 	@Autowired
-	LikedService service;
+	Item2Service service;
 	
 	@Test
 	void contextLoads() {
 		
-		List<LikedDTO> list = null;
+		List<Item2DTO> list = null;
 		try {
 			list = service.get();
 		} catch (Exception e) {
@@ -26,8 +26,8 @@ class GetAllLiked {
 			e.printStackTrace();
 		}
 		
-		for(LikedDTO l:list) {
-			System.out.println(l);
+		for(Item2DTO i:list) {
+			System.out.println(i);
 		}
 		
 	}
