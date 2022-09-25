@@ -14,10 +14,10 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 		WHERE ca.cartid = #{cartid}
 	</select>
 	
-	<!-- 
-	<select id="selectAll" resultType="cartDTO">
-	</select>
-	 -->
+	
+<!-- 	<select id="selectAll" resultType="cartDTO">
+	</select> -->
+	 
 	 
 	<insert id="insert" parameterType="cartDTO">
 		INSERT INTO cart(custid, itemid, cnt, date) VALUES (#{custid},#{itemid},#{cnt},NOW())
